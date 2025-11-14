@@ -1,0 +1,58 @@
+[project]
+name = "sync-notifications"
+version = "0.1.0"
+description = "Generate windows notifications based on google calendar events"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "google-api-python-client",
+    "google-auth-httplib2",
+    "google-auth-oauthlib",
+    "python-dateutil",
+    "tzlocal",
+]
+
+[dependency-groups]
+format = [
+    "black",
+    "isort",
+    "mypy"
+]
+test = [
+    "pytest-cov",
+    "pytest",
+    "types-requests>=2.31.0.6",
+    "types-python-dateutil>=2.9.0.20251108",
+]
+dev = [
+    { include-group = "format" },
+    { include-group = "test" },
+]
+
+[tool.isort]
+skip = ["venv"]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+ignore_missing_imports = true
+init_forbid_extra = true
+init_typed = true
+warn_requried_dynamic_aliases = true
+warn_untyped_fields = true
+exclude = [
+    "^cli_scripts/",
+    "^bin/",
+]
+
+[tool.black]
+line-length = 120
+target-version = ["py313"]
+extend-exclude = "/(bin|cli_scripts)/"
+
+
+[tool.ruff]
+ine-length = 120
+select = ["E", "W", "F"] # pycodestyle (E/W) + pyflakes (F)
+ignore = []
