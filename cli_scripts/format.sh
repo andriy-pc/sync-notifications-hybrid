@@ -10,8 +10,8 @@ fi
 isort \
   --quiet \
   --settings "$script_dir/../pyproject.toml" \
-  --skip "${script_dir}/../.cache" \
-  --skip "${script_dir}/../.venv" \
+  --skip ".cache" \
+  --skip ".venv" \
   ${check_args[@]+"${check_args[@]}"} \
   "$script_dir/.."
 

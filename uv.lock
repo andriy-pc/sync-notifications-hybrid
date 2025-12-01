@@ -1,5 +1,5 @@
 version = 1
-revision = 3
+revision = 2
 requires-python = ">=3.13"
 
 [[package]]
@@ -546,7 +546,6 @@ dependencies = [
     { name = "google-auth-httplib2" },
     { name = "google-auth-oauthlib" },
     { name = "python-dateutil" },
-    { name = "types-python-dateutil" },
     { name = "tzlocal" },
 ]
 
@@ -557,6 +556,7 @@ dev = [
     { name = "mypy" },
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "types-python-dateutil" },
     { name = "types-requests" },
 ]
 format = [
@@ -567,6 +567,7 @@ format = [
 test = [
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "types-python-dateutil" },
     { name = "types-requests" },
 ]
 
@@ -576,7 +577,6 @@ requires-dist = [
     { name = "google-auth-httplib2" },
     { name = "google-auth-oauthlib" },
     { name = "python-dateutil" },
-    { name = "types-python-dateutil", specifier = ">=2.9.0.20251108" },
     { name = "tzlocal" },
 ]
 
@@ -587,6 +587,7 @@ dev = [
     { name = "mypy" },
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "types-python-dateutil", specifier = ">=2.9.0.20251108" },
     { name = "types-requests", specifier = ">=2.31.0.6" },
 ]
 format = [
@@ -597,6 +598,7 @@ format = [
 test = [
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "types-python-dateutil", specifier = ">=2.9.0.20251108" },
     { name = "types-requests", specifier = ">=2.31.0.6" },
 ]
 

@@ -26,8 +26,6 @@ from googleapiclient.discovery import build
 # -------------------------------------------------------------------------
 SCOPES = ["https://www.googleapis.com/auth/calendar.readonly", "https://www.googleapis.com/auth/tasks.readonly"]
 CLIENT_SECRETS_FILE = "client_secrets.json"  # from Google Cloud Console
-TOKEN_PICKLE = "token.pickle"  # stores credentials
-NOTIFIED_STORE = "notified_events.json"  # store of events already notified for each date
 POLL_INTERVAL_SECONDS = 60  # how often to check (every minute)
 
 

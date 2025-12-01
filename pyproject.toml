@@ -30,17 +30,12 @@ dev = [
 ]
 
 [tool.isort]
-skip = ["venv"]
 profile = "black"
 
 [tool.mypy]
 python_version = "3.13"
 strict = true
 ignore_missing_imports = true
-init_forbid_extra = true
-init_typed = true
-warn_requried_dynamic_aliases = true
-warn_untyped_fields = true
 exclude = [
     "^cli_scripts/",
     "^bin/",
@@ -51,6 +46,11 @@ line-length = 120
 target-version = ["py313"]
 extend-exclude = "/(bin|cli_scripts)/"
 
+[tool.coverage.run]
+omit = [
+    "__init__.py",
+    "tests/*",
+]
 
 [tool.ruff]
 ine-length = 120
